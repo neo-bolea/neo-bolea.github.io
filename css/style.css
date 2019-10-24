@@ -1,10 +1,12 @@
+/*** Global Standards ***/
 :root
 {
     --main-title-color: #16D4A9;
     --main-text-color: #4FBC8D;
+
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Global Standards */
 h1, h2, h3, h4, h5, h6
 {
     color: var(--main-title-color);
@@ -16,9 +18,45 @@ h1, h2, h3, h4, h5, h6
     padding: 20px 0;
 }
 
+.Dropdown
+{
+    display: inline;
+    position: relative;
+}
+
+.DropdownContent
+{
+    display: none;
+    position: absolute;
+    /*box-shadow: 0px 8px 16px 0px #000;*/
+    padding: 5px;
+    margin-top: 0px;
+    z-index: 1;
+
+    border-radius: 3px;
+}
+
+.Dropdown:hover .DropdownContent
+{
+    display: inline;
+    top: 2em;
+    left: 0;
+}
+
+.LanguageIcon
+{
+    width: 80px;
+    height: 50px;
+}
+
 .LightDark
 {
     background-color: #494754;
+}
+
+.MediumDark
+{
+    background-color: #353342;
 }
 
 .Dark
@@ -44,6 +82,7 @@ h1, h2, h3, h4, h5, h6
 
     font-size: 50px;
     letter-spacing: 2px;
+    text-shadow: 0px 0px 3px var(--main-title-color);
 }
 
 /* Contacts */
@@ -65,14 +104,15 @@ h1, h2, h3, h4, h5, h6
     width: 100%;
 }
 
+/* MainNav */
 #MainNav
 {
-    padding: 1px 0 1px 0;
+    box-shadow: 0 4px 5px #353342;
+    padding: 1px 0;
     margin-left: 10px;
     margin-right: 105px;
     border-radius: 5px;
-
-    overflow: hidden;
+    z-index: 1;
 }
 
 #MainNav ul
@@ -88,14 +128,20 @@ h1, h2, h3, h4, h5, h6
     text-align: center;
 
     list-style: none;
-    font-family: 'Big Shoulders Text', cursive;
-    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     font-weight: bold;
 }
 
+#LanguageDropdown
+{
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
 
-/* Media Queries */
+/*** Media Queries ***/
+
+/* Mobile */
 @media(max-width: 768px)
 {
     #MainContent
