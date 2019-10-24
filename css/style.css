@@ -1,0 +1,145 @@
+:root
+{
+    --main-title-color: #16D4A9;
+    --main-text-color: #4FBC8D;
+}
+
+/* Global Standards */
+h1, h2, h3, h4, h5, h6
+{
+    color: var(--main-title-color);
+}
+
+.Container
+{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.LightDark
+{
+    background-color: #494754;
+}
+
+.Dark
+{
+    background-color: #162034;
+}
+
+#MainBody
+{
+    color: var(--main-text-color);
+}
+
+#MainContent
+{
+    position: relative;
+}
+
+#MainTitle
+{
+    font-family: 'Big Shoulders Text', cursive;
+    text-align: center;
+    margin: 0;
+
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+/* Contacts */
+#Contacts
+{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 80px;
+    padding: 10px 10px 20px 10px;
+
+    border-radius: 10px;
+    background-color: #F8C019;
+}
+
+#Contacts svg
+{
+    fill: black;
+    width: 100%;
+}
+
+#MainNav
+{
+    padding: 1px 0 1px 0;
+    margin-left: 10px;
+    margin-right: 105px;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+#MainNav ul
+{
+    align-content: center;
+    text-align: center;
+}
+
+#MainNav li
+{
+    display: inline;
+    padding: 0 10px;
+    text-align: center;
+
+    list-style: none;
+    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px)
+{
+    #MainContent
+    {
+        margin: 0 2%;
+    }
+
+    #Contacts
+    {
+        position: static;
+        padding: 10px;
+        width: 10%;
+    }
+
+    #MainNav 
+    {
+        margin: 0 0 10px 0;
+    }
+
+    #MainNav ul
+    {
+        padding: 0 0px;
+        margin: 0;
+    }
+
+    #MainNav li
+    {
+        display: block;
+        text-align: center;
+        padding: 0px;
+        border: 3px;
+        margin: 0;
+        border-top-style: solid;
+        width: 100%;
+        border-color: #162034;
+    }
+
+    #MainNav li:first-child
+    {
+        border-top-style: none;
+    }
+
+    #MainNav li:last-child
+    {
+        border-bottom-style: none;
+    }
+}
