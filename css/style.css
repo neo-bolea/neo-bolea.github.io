@@ -1,23 +1,32 @@
 /*** Global Standards ***/
 :root
 {
-    --main-title-color: #16D4A9;
     --main-text-color: #4FBC8D;
+    --main-title-color: #16D4A9;
 
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6
+body
 {
-    color: var(--main-title-color);
+    background-color: #cccccc;
+    background-image: "./img/Mountain Cut.png";
 }
 
+h1, h2, h3, h4, h5, h6
+{
+    color: #000;
+}
+
+/*** General ***/
 .Container
 {
     width: 100%;
+
     padding: 20px 0;
 }
 
+/* Dropdown */
 .Dropdown
 {
     display: inline;
@@ -26,11 +35,11 @@ h1, h2, h3, h4, h5, h6
 
 .DropdownContent
 {
-    display: none;
     position: absolute;
-    /*box-shadow: 0px 8px 16px 0px #000;*/
-    padding: 5px;
+
+    display: none;
     margin-top: 0px;
+    padding: 5px;
     z-index: 1;
 
     border-radius: 3px;
@@ -43,29 +52,10 @@ h1, h2, h3, h4, h5, h6
     left: 0;
 }
 
-.LanguageIcon
-{
-    width: 80px;
-    height: 50px;
-}
-
-.LightDark
-{
-    background-color: #494754;
-}
-
-.MediumDark
-{
-    background-color: #353342;
-}
-
-.Dark
-{
-    background-color: #162034;
-}
-
+/** Main **/
 #MainBody
 {
+    background-color: #162034;
     color: var(--main-text-color);
 }
 
@@ -76,13 +66,15 @@ h1, h2, h3, h4, h5, h6
 
 #MainTitle
 {
-    font-family: 'Big Shoulders Text', cursive;
     text-align: center;
     margin: 0;
 
+    font-family: 'Big Shoulders Text', cursive;
     font-size: 50px;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 3px var(--main-title-color);
+
+    color: var(--main-title-color);
+    text-shadow: 0 0 8px var(--main-title-color);
 }
 
 /* Contacts */
@@ -92,27 +84,35 @@ h1, h2, h3, h4, h5, h6
     right: 0px;
     top: 0px;
     width: 80px;
+
     padding: 10px 10px 20px 10px;
 
     border-radius: 10px;
     background-color: #F8C019;
+    fill: #000;
 }
 
-#Contacts svg
+#Contacts a:first-child svg
 {
-    fill: black;
-    width: 100%;
+    padding: 0px 0px 7px 0px;
+}
+
+#Contacts a:last-child svg
+{
+    padding: 7px 0px 0px 0px;
 }
 
 /* MainNav */
 #MainNav
 {
-    box-shadow: 0 4px 5px #353342;
-    padding: 1px 0;
     margin-left: 10px;
     margin-right: 105px;
-    border-radius: 5px;
+    padding: 1px 0;
     z-index: 1;
+    
+    background-color: #494754;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px #353342;
 }
 
 #MainNav ul
@@ -124,19 +124,28 @@ h1, h2, h3, h4, h5, h6
 #MainNav li
 {
     display: inline;
-    padding: 0 10px;
     text-align: center;
+
+    padding: 0 10px;
 
     list-style: none;
     font-size: 25px;
     font-weight: bold;
 }
 
+/* Language Dropdown */
 #LanguageDropdown
 {
     margin-right: 10px;
+
     font-size: 25px;
     font-weight: bold;
+}
+
+.LanguageIcon
+{
+    width: 80px;
+    height: 50px;
 }
 
 /*** Media Queries ***/
@@ -152,8 +161,9 @@ h1, h2, h3, h4, h5, h6
     #Contacts
     {
         position: static;
-        padding: 10px;
         width: 10%;
+
+        padding: 2%;
     }
 
     #MainNav 
@@ -163,20 +173,22 @@ h1, h2, h3, h4, h5, h6
 
     #MainNav ul
     {
-        padding: 0 0px;
         margin: 0;
+        padding: 0;
     }
 
     #MainNav li
     {
         display: block;
         text-align: center;
-        padding: 0px;
+        width: 100%;
+
         border: 3px;
         margin: 0;
-        border-top-style: solid;
-        width: 100%;
+        padding: 0px;
+
         border-color: #162034;
+        border-top-style: solid;
     }
 
     #MainNav li:first-child
